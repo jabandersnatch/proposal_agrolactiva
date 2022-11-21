@@ -220,11 +220,27 @@ class ProviderProductControl(models.Model):
         verbose_name_plural = "Provider Product Control"
         ordering = ['name']
 
+# Create client
+
+class Client(models.Model):
+    id = models.AutoField(primary_key=True)
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    organization = models.CharField(max_length=100)
+    register_date = models.DateField()
+
+    def __str__(self):
+        return self.name
+        
+    class Meta:
+        verbose_name_plural = "Clients"
+        ordering = ['name']
+
 # Create product dispatch model
 class ProductDispatch(models.Model):
     id = models.AutoField(primary_key=True)
     id_route = models.ForeignKey(Route, on_delete=models.CASCADE)
     id_dispatched_by = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
     dispatch_date = models.DateField()
     dispatch_product_quantity = models.IntegerField()
 
@@ -234,8 +250,6 @@ class ProductDispatch(models.Model):
     class Meta:
         verbose_name_plural = "Product Dispatch"
         ordering = ['name']
-
-
 
 
 
