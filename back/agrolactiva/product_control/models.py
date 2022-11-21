@@ -220,6 +220,22 @@ class ProviderProductControl(models.Model):
         verbose_name_plural = "Provider Product Control"
         ordering = ['name']
 
+# Create product dispatch model
+class ProductDispatch(models.Model):
+    id = models.AutoField(primary_key=True)
+    id_route = models.ForeignKey(Route, on_delete=models.CASCADE)
+    id_dispatched_by = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    dispatch_date = models.DateField()
+    dispatch_product_quantity = models.IntegerField()
+
+    def __str__(self):
+        return self.name
+        
+    class Meta:
+        verbose_name_plural = "Product Dispatch"
+        ordering = ['name']
+
+
 
 
 
