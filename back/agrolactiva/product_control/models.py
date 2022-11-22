@@ -72,7 +72,7 @@ class Location(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=100)
-    municipality = models.ForeignKey(Municipality, on_delete=models.CASCADE)
+    id_municipality = models.ForeignKey(Municipality, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -124,13 +124,12 @@ class Person(models.Model):
 
 # Create contact info model
 class ContactInfo(models.Model):
-    id = models.AutoField(primary_key=True)
     id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
     phone_number = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.id
+        return self.id_person
 
     class Meta:
         verbose_name_plural = "Contact Info"
@@ -138,7 +137,6 @@ class ContactInfo(models.Model):
 
 # Create billing info model 
 class BillingInfo(models.Model):
-    id = models.AutoField(primary_key=True)
     id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
     payment_type = models.CharField(
         max_length=11,
@@ -155,7 +153,7 @@ class BillingInfo(models.Model):
     id_representative = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return f'{self.id}id:person:{self.id_person}'
+        return self.id_person
 
     class Meta:
         verbose_name_plural = "Billing Info"
@@ -170,7 +168,7 @@ class Employee(models.Model):
     end_date = models.DateField()
 
     def __str__(self):
-        return self.id_person.first_name
+        return self.id_person
         
     class Meta:
         verbose_name_plural = "Employees"
@@ -180,11 +178,11 @@ class Employee(models.Model):
 class Provider(models.Model):
     id = models.AutoField(primary_key=True)
     id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
-    route = models.ForeignKey(Route, on_delete=models.CASCADE)
+    id_route = models.ForeignKey(Route, on_delete=models.CASCADE)
     register_date = models.DateField()
 
     def __str__(self):
-        return self.id_person.first_name
+        return self.id_person
         
     class Meta:
         verbose_name_plural = "Providers"
@@ -233,27 +231,26 @@ class ProviderProductControl(models.Model):
     id_provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
     id_delivery = models.ForeignKey(Delivery, on_delete=models.CASCADE)
     quantity = models.IntegerField()
-    provider_price = models.ForeignKey(ProviderPrice, on_delete=models.CASCADE)
-    total_price = models.IntegerField()
-    delivery_date = models.DateField()
+    id_provider_price = models.ForeignKey(ProviderPrice, on_delete=models.CASCADE)
+    payment_amount = models.IntegerField()
 
     def __str__(self):
-        return f'{self.id_provider} - {self.id_delivery} - {self.quantity} - {self.provider_price} - {self.total_price} - {self.delivery_date}'
+        return f'{self.id_provider} - {self.id_delivery} - {self.quantity} - {self.id_provider_price} - {self.payment_amount}'
         
     class Meta:
         verbose_name_plural = "Provider Product Control"
-        ordering = ['id_provider', 'id_delivery', 'quantity', 'provider_price', 'total_price', 'delivery_date']
+        ordering = ['id_provider', 'id_delivery', 'quantity', 'id_provider_price', 'payment_amount']
 
 # Create client
 
 class Client(models.Model):
     id = models.AutoField(primary_key=True)
-    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
     organization = models.CharField(max_length=100)
     register_date = models.DateField()
 
     def __str__(self):
-        return self.person.first_name
+        return self.id_person
         
     class Meta:
         verbose_name_plural = "Clients"
@@ -263,6 +260,7 @@ class Client(models.Model):
 class ProductDispatch(models.Model):
     id = models.AutoField(primary_key=True)
     id_route = models.ForeignKey(Route, on_delete=models.CASCADE)
+    id_delivery = models.ForeignKey(Delivery, on_delete=models.CASCADE)
     id_dispatched_by = models.ForeignKey(
             Employee, 
             related_name='dispatched_by',
@@ -272,11 +270,11 @@ class ProductDispatch(models.Model):
             related_name='client',
             on_delete=models.CASCADE)
     dispatch_date = models.DateField()
-    dispatch_product_quantity = models.IntegerField()
+    quantity = models.IntegerField()
 
     def __str__(self):
-        return f'{self.id_route} - {self.id_dispatched_by} - {self.id_client} - {self.dispatch_date} - {self.dispatch_product_quantity}'
+        return f'{self.id_route} - {self.id_dispatched_by} - {self.id_client} - {self.dispatch_date} - {self.quantity}'
         
     class Meta:
         verbose_name_plural = "Product Dispatch"
-        ordering = ['id_route', 'id_dispatched_by', 'id_client', 'dispatch_date', 'dispatch_product_quantity']
+        ordering = ['id_route', 'id_dispatched_by', 'id_client', 'dispatch_date', 'quantity']

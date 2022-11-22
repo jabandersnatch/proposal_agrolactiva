@@ -6,7 +6,6 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework import status, viewsets
 from datetime import datetime
-
 # Create your views here.
 
 @authentication_classes([SessionAuthentication, BasicAuthentication])
@@ -80,4 +79,10 @@ class ProviderProductControlViewSet(viewsets.ModelViewSet):
 class ProductDispatchViewSet(viewsets.ModelViewSet):
     queryset = ProductDispatch.objects.all()
     serializer_class = ProductDispatchSerializer
+
+@authentication_classes([SessionAuthentication, BasicAuthentication])
+@permission_classes([IsAuthenticated])
+class ClientViewSet(viewsets.ModelViewSet):
+    queryset = Client.objects.all()
+    serializer_class = ClientSerializer
 

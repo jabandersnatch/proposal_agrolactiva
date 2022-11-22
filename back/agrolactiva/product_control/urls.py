@@ -14,11 +14,11 @@ router.register(r'billinginfo', BillingInfoViewSet)
 router.register(r'delivery', DeliveryViewSet)
 router.register(r'provider_price', ProviderPriceViewSet)
 router.register(r'product_product_control', ProviderProductControlViewSet)
+router.register(r'client', ClientViewSet)
 router.register(r'product_dispatch', ProductDispatchViewSet)
 
 app_name = 'product_control'
 urlpatterns = [
     path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
