@@ -1,59 +1,5 @@
 from django.db import models
 
-# Create municipality model
-class Municipality(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100)
-    code = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name
-        
-    class Meta:
-        verbose_name_plural = "Municipalities"
-        ordering = ['name']
-
-# Create location model
-class Location(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100)
-    code = models.CharField(max_length=100)
-    municipality = models.ForeignKey(Municipality, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.name
-        
-    class Meta:
-        verbose_name_plural = "Locations"
-        ordering = ['name']
-
-# Create route model
-class Route(models.Model):
-    id = models.AutoField(primary_key=True)
-    n_providers = models.IntegerField()
-    avg_daily_product_income = models.IntegerField()
-
-    def __str__(self):
-        return self.id
-
-    class Meta:
-        verbose_name_plural = "Routes"
-        ordering = ['id']
-
-# Create route location model
-class RouteLocation(models.Model):
-    id = models.AutoField(primary_key=True)
-    id_route = models.ForeignKey(Route, on_delete=models.CASCADE)
-    id_location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    order = models.IntegerField()
-
-    def __str__(self):
-        return self.id
-
-    class Meta:
-        verbose_name_plural = "Route Locations"
-        ordering = ['id']
-        
 # Create enumeration document type model
 class document_type(models.TextChoices):
     '''
@@ -98,6 +44,63 @@ class bank(models.TextChoices):
     BBVA_COLOMBIA = 'BBVA_COLOMBIA', 'BBVA Colombia'
     NO_APLICA = 'NO_APLICA', 'No aplica'
 
+
+# Create route type text TextChoices
+class route_type(models.TextChoices):
+    '''
+    Enunmeration of route types
+    '''
+    MORNING_ROUTE = 'MORNING_ROUTE', 'Ruta de la mañana'
+    AFTERNOON_ROUTE = 'AFTERNOON_ROUTE', 'Ruta de la tarde'
+    NIGHT_ROUTE = 'NIGHT_ROUTE', 'Ruta de la noche'
+
+# Create municipality model
+class Municipality(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    code = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+        
+    class Meta:
+        verbose_name_plural = "Municipalities"
+        ordering = ['name']
+
+# Create location model
+class Location(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    code = models.CharField(max_length=100)
+    municipality = models.ForeignKey(Municipality, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+        
+    class Meta:
+        verbose_name_plural = "Locations"
+        ordering = ['name']
+
+# Create route model
+class Route(models.Model):
+    id = models.AutoField(primary_key=True)
+    n_providers = models.IntegerField()
+    avg_daily_product_income = models.IntegerField()
+    locations = models.ManyToManyField(Location)
+    route_type = models.CharField(
+        max_length=20,
+        choices=route_type.choices,
+        default=route_type.MORNING_ROUTE,
+    )
+
+    def __str__(self):
+        return self.id
+
+    class Meta:
+        verbose_name_plural = "Routes"
+        ordering = ['id']
+        
+
         
 # Create person model
 class Person(models.Model):
@@ -113,11 +116,11 @@ class Person(models.Model):
     
 
     def __str__(self):
-        return self.name
+        return self.first_name
         
     class Meta:
         verbose_name_plural = "Persons"
-        ordering = ['name']       
+        ordering = ['last_name', 'first_name']
 
 # Create contact info model
 class ContactInfo(models.Model):
@@ -143,7 +146,7 @@ class BillingInfo(models.Model):
         default=payment_type.CASH,
     )
     bank = models.CharField(
-        max_length=15,
+        max_length=25,
         choices=bank.choices,
         default=bank.BANCOLOMBIA,
     )
@@ -152,7 +155,7 @@ class BillingInfo(models.Model):
     id_representative = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return self.id
+        return f'{self.id}id:person:{self.id_person}'
 
     class Meta:
         verbose_name_plural = "Billing Info"
@@ -161,47 +164,68 @@ class BillingInfo(models.Model):
 # Create employee model 
 class Employee(models.Model):
     id = models.AutoField(primary_key=True)
-    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
     salary = models.IntegerField()
     start_date = models.DateField()
     end_date = models.DateField()
 
     def __str__(self):
-        return self.name
+        return self.id_person.first_name
         
     class Meta:
         verbose_name_plural = "Employees"
-        ordering = ['name']
+        ordering = ['start_date']
         
 # Create provider model
 class Provider(models.Model):
     id = models.AutoField(primary_key=True)
-    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
     route = models.ForeignKey(Route, on_delete=models.CASCADE)
     register_date = models.DateField()
 
     def __str__(self):
-        return self.name
+        return self.id_person.first_name
         
     class Meta:
         verbose_name_plural = "Providers"
-        ordering = ['name']
+        ordering = ['register_date']
 
 # Create delivery model
 class Delivery(models.Model):
     id = models.AutoField(primary_key=True)
     id_route = models.ForeignKey(Route, on_delete=models.CASCADE)
-    id_delivered_by = models.ForeignKey(Employee, on_delete=models.CASCADE)
-    id_received_by = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    id_delivered_by = models.ForeignKey(
+            Employee,
+            related_name='delivered_by',
+            on_delete=models.CASCADE)
+    id_received_by = models.ForeignKey(
+            Employee, 
+            related_name='received_by',
+            on_delete=models.CASCADE)
     delivery_date = models.DateField()
-    delivery_product_quantity = models.IntegerField()
+    quantity = models.IntegerField()
 
     def __str__(self):
-        return self.name
+        return self.id
         
     class Meta:
         verbose_name_plural = "Deliveries"
-        ordering = ['name']
+        ordering = ['delivery_date', 'quantity']
+
+# Create ProviderPrice
+class ProviderPrice(models.Model):
+    id = models.AutoField(primary_key=True)
+    id_provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
+    price = models.IntegerField()
+    start_date = models.DateField()
+    end_date = models.DateField()
+
+    def __str__(self):
+        return f'{self.id_provider} - {self.price} - {self.start_date} - {self.end_date}'
+        
+    class Meta:
+        verbose_name_plural = "Provider Prices"
+        ordering = ['id_provider', 'price']
 
 # Create provider product control model
 class ProviderProductControl(models.Model):
@@ -209,16 +233,16 @@ class ProviderProductControl(models.Model):
     id_provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
     id_delivery = models.ForeignKey(Delivery, on_delete=models.CASCADE)
     quantity = models.IntegerField()
-    unit_price = models.IntegerField()
+    provider_price = models.ForeignKey(ProviderPrice, on_delete=models.CASCADE)
     total_price = models.IntegerField()
     delivery_date = models.DateField()
 
     def __str__(self):
-        return self.name
+        return f'{self.id_provider} - {self.id_delivery} - {self.quantity} - {self.provider_price} - {self.total_price} - {self.delivery_date}'
         
     class Meta:
         verbose_name_plural = "Provider Product Control"
-        ordering = ['name']
+        ordering = ['id_provider', 'id_delivery', 'quantity', 'provider_price', 'total_price', 'delivery_date']
 
 # Create client
 
@@ -229,45 +253,30 @@ class Client(models.Model):
     register_date = models.DateField()
 
     def __str__(self):
-        return self.name
+        return self.person.first_name
         
     class Meta:
         verbose_name_plural = "Clients"
-        ordering = ['name']
+        ordering = ['register_date']
 
 # Create product dispatch model
 class ProductDispatch(models.Model):
     id = models.AutoField(primary_key=True)
     id_route = models.ForeignKey(Route, on_delete=models.CASCADE)
-    id_dispatched_by = models.ForeignKey(Employee, on_delete=models.CASCADE)
-    id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
+    id_dispatched_by = models.ForeignKey(
+            Employee, 
+            related_name='dispatched_by',
+            on_delete=models.CASCADE)
+    id_client = models.ForeignKey(
+            Client, 
+            related_name='client',
+            on_delete=models.CASCADE)
     dispatch_date = models.DateField()
     dispatch_product_quantity = models.IntegerField()
 
     def __str__(self):
-        return self.name
+        return f'{self.id_route} - {self.id_dispatched_by} - {self.id_client} - {self.dispatch_date} - {self.dispatch_product_quantity}'
         
     class Meta:
         verbose_name_plural = "Product Dispatch"
-        ordering = ['name']
-
-
-
-
-
-
-
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        ordering = ['id_route', 'id_dispatched_by', 'id_client', 'dispatch_date', 'dispatch_product_quantity']
