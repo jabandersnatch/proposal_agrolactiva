@@ -38,17 +38,6 @@ class RouteAdmin(admin.ModelAdmin):
     list_filter = ()
     fieldsets = ()
 
-@admin.register(Person)
-class PersonAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'document_type', 'document_number')
-    list_filter = ('document_type',)
-    search_fields = ('first_name', 'last_name', 'document_type', 'document_number')
-    ordering = ('last_name', 'first_name')
-
-    filter_horizontal = ()
-    list_filter = ()
-    fieldsets = ()
-
 @admin.register(ContactInfo)
 class ContactInfoAdmin(admin.ModelAdmin):
     list_display = ('id_person', 'phone_number', 'email')

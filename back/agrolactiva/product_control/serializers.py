@@ -19,12 +19,6 @@ class RouteSerializer(serializers.ModelSerializer):
         model = Route
         fields = '__all__'
 
-# Create Person serializer class
-class PersonSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Person
-        fields = '__all__'
-
 # Create Employee serializer class
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:

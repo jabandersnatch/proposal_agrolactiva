@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create enumeration document type model
 class document_type(models.TextChoices):
@@ -99,31 +100,10 @@ class Route(models.Model):
     class Meta:
         verbose_name_plural = "Routes"
         ordering = ['id']
-        
-
-        
-# Create person model
-class Person(models.Model):
-    id = models.AutoField(primary_key=True)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    document_type = models.CharField(
-        max_length=3,
-        choices=document_type.choices,
-        default=document_type.CC,
-    )
-    document_number = models.CharField(max_length=100)
-    
-
-    def __str__(self):
-        return str(self.first_name) + ' ' + str(self.last_name)
-        
-    class Meta:
-        verbose_name_plural = "Persons"
 
 # Create contact info model
 class ContactInfo(models.Model):
-    id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    id_person = models.ForeignKey(User, on_delete=models.CASCADE)
     phone_number = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
 
@@ -136,7 +116,7 @@ class ContactInfo(models.Model):
 
 # Create billing info model 
 class BillingInfo(models.Model):
-    id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    id_person = models.ForeignKey(User, on_delete=models.CASCADE)
     payment_type = models.CharField(
         max_length=11,
         choices=payment_type.choices,
@@ -161,7 +141,7 @@ class BillingInfo(models.Model):
 # Create employee model 
 class Employee(models.Model):
     id = models.AutoField(primary_key=True)
-    id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    id_person = models.ForeignKey(User, on_delete=models.CASCADE)
     salary = models.IntegerField()
     start_date = models.DateField()
     end_date = models.DateField()
@@ -176,7 +156,7 @@ class Employee(models.Model):
 # Create provider model
 class Provider(models.Model):
     id = models.AutoField(primary_key=True)
-    id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    id_person = models.ForeignKey(User, on_delete=models.CASCADE)
     id_route = models.ForeignKey(Route, on_delete=models.CASCADE)
     register_date = models.DateField()
 
@@ -244,7 +224,7 @@ class ProviderProductControl(models.Model):
 
 class Client(models.Model):
     id = models.AutoField(primary_key=True)
-    id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    id_person = models.ForeignKey(User, on_delete=models.CASCADE)
     organization = models.CharField(max_length=100)
     register_date = models.DateField()
 
