@@ -153,7 +153,7 @@ class BillingInfo(models.Model):
     id_representative = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return self.id_person
+        return f'{self.id_person}'
 
     class Meta:
         verbose_name_plural = "Billing Info"
@@ -168,7 +168,7 @@ class Employee(models.Model):
     end_date = models.DateField()
 
     def __str__(self):
-        return self.id_person
+        return f'{self.id_person}'
         
     class Meta:
         verbose_name_plural = "Employees"
@@ -182,7 +182,7 @@ class Provider(models.Model):
     register_date = models.DateField()
 
     def __str__(self):
-        return self.id_person
+        return f'{self.id_person}'
         
     class Meta:
         verbose_name_plural = "Providers"
