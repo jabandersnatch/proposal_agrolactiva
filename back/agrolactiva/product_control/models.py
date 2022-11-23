@@ -116,11 +116,10 @@ class Person(models.Model):
     
 
     def __str__(self):
-        return self.first_name
+        return str(self.first_name) + ' ' + str(self.last_name)
         
     class Meta:
         verbose_name_plural = "Persons"
-        ordering = ['last_name', 'first_name']
 
 # Create contact info model
 class ContactInfo(models.Model):
@@ -129,7 +128,7 @@ class ContactInfo(models.Model):
     email = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.id_person
+        return f'{self.id_person.first_name} {self.id_person.last_name} {self.email}'
 
     class Meta:
         verbose_name_plural = "Contact Info"
@@ -168,7 +167,7 @@ class Employee(models.Model):
     end_date = models.DateField()
 
     def __str__(self):
-        return f'{self.id_person}'
+        return f'{self.id_person.name}'
         
     class Meta:
         verbose_name_plural = "Employees"
