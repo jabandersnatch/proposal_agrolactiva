@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="my-2 row">
+    <h1 class="text-center">Delivery Form</h1>
+  </div>
+
+  <div class="my-2 row">
+    <h1 class="text">Employee who Delivery</h1>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">First Name</label>
+      <div class="col-lg-9  ">
+        <input #first_name type="text" class="form-control" placeholder="first name">
+      </div>
+    </div>
+
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">Last Name</label>
+      <div class="col-lg-9  ">
+        <input #last_name type="text" class="form-control" placeholder="last name">
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">Document Type</label>
+      <div class="col-lg-9">
+        <select class="form-select form-select" aria-label=".form-select-md example">
+          <option selected>Open this select menu</option>
+          <option value="CC">CC</option>
+          <option value="CE">CE</option>
+          <option value="TI">TI</option>
+          <option value="PA">PA</option>
+          <option value="RC">RC</option>
+          <option value="NIT">NIT</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">Document Number</label>
+      <div class="col-lg-9  ">
+        <input #document_number type="text" class="form-control" placeholder="Document number">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="my-2 row">
+    <h1 class="text">Employee who Receive</h1>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">First Name</label>
+      <div class="col-lg-9  ">
+        <input #first_name type="text" class="form-control" placeholder="first name">
+      </div>
+    </div>
+
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">Last Name</label>
+      <div class="col-lg-9  ">
+        <input #last_name type="text" class="form-control" placeholder="last name">
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">Document Type</label>
+      <div class="col-lg-9">
+        <select class="form-select form-select" aria-label=".form-select-md example">
+          <option selected>Open this select menu</option>
+          <option value="CC">CC</option>
+          <option value="CE">CE</option>
+          <option value="TI">TI</option>
+          <option value="PA">PA</option>
+          <option value="RC">RC</option>
+          <option value="NIT">NIT</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">Document Number</label>
+      <div class="col-lg-9  ">
+        <input #document_number type="text" class="form-control" placeholder="Document number">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="my-2 row">
+    <h1 class="text">Delivery data</h1>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">Delivery Date</label>
+      <form class="row row-cols-lg-auto">
+        <div class="col-lg-9">
+          <div class="input-group">
+            <input
+              class="form-control"
+              placeholder="yyyy-mm-dd"
+              name="dp"
+              [(ngModel)]="model"
+              ngbDatepicker
+              #d="ngbDatepicker"
+            />
+            <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col">
+      <label for="staticEmail" class="col-lg-3 col-form-label">Product quantity</label>
+      <div class="col-lg-9  ">
+        <input #product_quantity type="text" class="form-control" placeholder="Quantity in Liters">
+      </div>
+    </div>
+  </div>
+
+
+</div>

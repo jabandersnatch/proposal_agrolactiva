@@ -27,6 +27,12 @@ const AboutUs: React.FC = ()=> {
           <Member id='hernando' name='Hernando' socialId='@hernando' link='https://github.com/craftzdog/dotfiles-public/commits/master'/>
           <Member id='alberto' name='Alberto Ramos' socialId='@alberto' link='https://github.com/craftzdog/dotfiles-public/commits/master'/>
         </div>
+        <br />
+        <div>
+          <a className="btn btn-primary btn-lg" href="http://localhost:4200/">
+            Comenzar
+          </a>
+        </div>
       </div>
     </section>
   )
