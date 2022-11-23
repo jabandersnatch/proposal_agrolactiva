@@ -31,6 +31,12 @@ class RouteViewSet(viewsets.ModelViewSet):
 
 @authentication_classes([SessionAuthentication, BasicAuthentication, TokenAuthentication])
 @permission_classes([IsAuthenticated])
+class PersonViewSet(viewsets.ModelViewSet):
+    queryset = Person.objects.all()
+    serializer_class = PersonSerializer
+
+@authentication_classes([SessionAuthentication, BasicAuthentication, TokenAuthentication])
+@permission_classes([IsAuthenticated])
 class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
@@ -98,4 +104,5 @@ class CustomAuthToken(ObtainAuthToken):
             'first_name': user.first_name,
             'last_name': user.last_name,
             'user_id': user.pk,
+            'email': user.email,
         })

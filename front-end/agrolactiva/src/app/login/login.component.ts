@@ -12,25 +12,27 @@ export class LoginComponent implements OnInit {
 
   myform: FormGroup;
 
+  error: boolean = false
+
   constructor(private personService: PersonService) { }
 
   ngOnInit() {
-    this.myform = new FormGroup({
-      username: new FormControl(''),
-      password: new FormControl('')
-    })
   }
 
   get f() {
     return this.myform.controls;
   }
 
-  onSubmit() {
-    this.personService.login(this.f['username'].value, this.f['password'].value).pipe(first()).subscribe(
-      data => {
+  onSubmit(username: string, password: string) {
+    this.error = false
+
+    this.personService.login(username, password)
+      .subscribe(data => {
         console.log(data)
-      }
-    )
+      },
+        () => {
+          this.error = true
+        })
   }
 
 }
