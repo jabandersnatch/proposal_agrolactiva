@@ -20,5 +20,6 @@ router.register(r'product_dispatch', ProductDispatchViewSet)
 app_name = 'product_control'
 urlpatterns = [
     path('', include(router.urls)),
+    path('api/auth/', CustomAuthToken.as_view())
 ]
 
