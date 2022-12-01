@@ -38,14 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-<<<<<<< HEAD
     'rest_framework_swagger',
     'product_control',
-=======
     'product_control.apps.ProductControlConfig',
     'rest_framework.authtoken',
     'corsheaders'
->>>>>>> 6fd183ba10f346634007041c83923e595b83a163
 ]
 
 MIDDLEWARE = [

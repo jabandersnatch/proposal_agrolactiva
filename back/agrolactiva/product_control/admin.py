@@ -1,12 +1,5 @@
 from .models import *
 from django.contrib import admin
-<<<<<<< HEAD
-=======
-from django.contrib.auth import get_user_model
-from rest_framework.authtoken.admin import TokenAdmin
-
-TokenAdmin.raw_id_fields = ['user']
->>>>>>> 6fd183ba10f346634007041c83923e595b83a163
 
 @admin.register(Municipality)
 class MunicipalityAdmin(admin.ModelAdmin):

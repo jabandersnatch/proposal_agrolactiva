@@ -24,10 +24,6 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('api/', include('product_control.urls', namespace='product_control')),
-<<<<<<< HEAD
     path(r'api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/docs/', schema_view)
-=======
-    path(r'api/auth/', include('rest_framework.urls', namespace='rest_framework'))
->>>>>>> 6fd183ba10f346634007041c83923e595b83a163
 ]
