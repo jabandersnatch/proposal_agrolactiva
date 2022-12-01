@@ -1,6 +1,5 @@
 from .models import *
 from django.contrib import admin
-from django.contrib.auth import get_user_model
 
 @admin.register(Municipality)
 class MunicipalityAdmin(admin.ModelAdmin):
@@ -26,9 +25,9 @@ class LocationAdmin(admin.ModelAdmin):
 
 @admin.register(Route)
 class RouteAdmin(admin.ModelAdmin):
-    list_display = ('id', 'n_providers', 'avg_daily_product_income', 'route_type')
-    list_filter = ('id', 'n_providers', 'avg_daily_product_income', 'route_type')
-    search_fields = ('id', 'n_providers', 'avg_daily_product_income', 'route_type')
+    list_display =  ('id', 'n_providers', 'route_type')
+    list_filter =   ('id', 'n_providers',  'route_type')
+    search_fields = ('id', 'n_providers', 'route_type')
     ordering = ('id',)
 
     filter_horizontal = ()
@@ -110,9 +109,9 @@ class ProviderPriceAdmin(admin.ModelAdmin):
 
 @admin.register(ProviderProductControl)
 class ProviderProductControlAdmin(admin.ModelAdmin):
-    list_display = ('id', 'id_provider', 'id_delivery', 'quantity', 'id_provider_price', 'payment_amount')
-    list_filter = ('id', 'id_provider', 'id_delivery', 'quantity', 'id_provider_price', 'payment_amount')
-    search_fields = ('id', 'id_provider', 'id_delivery', 'quantity', 'id_provider_price', 'payment_amount')
+    list_display = ('id', 'id_provider', 'id_delivery', 'quantity', 'id_provider_price')
+    list_filter = ('id', 'id_provider', 'id_delivery', 'quantity', 'id_provider_price')
+    search_fields = ('id', 'id_provider', 'id_delivery', 'quantity', 'id_provider_price')
     ordering = ('id',)
 
     filter_horizontal = ()
@@ -122,9 +121,7 @@ class ProviderProductControlAdmin(admin.ModelAdmin):
 @admin.register(Client)
 class ClientAdmin(admin.ModelAdmin):
     list_display = ('id', 'id_person', 'organization', 'register_date')
-    list_filter = ('id', 'id_person', 'organization', 'register_date')
-    search_fields = ('id', 'id_person', 'organization', 'register_date')
-    ordering = ('id',)
+    ordering = ('id','register_date')
 
     filter_horizontal = ()
     list_filter = ()
@@ -132,12 +129,22 @@ class ClientAdmin(admin.ModelAdmin):
 
 @admin.register(ProductDispatch)
 class ProductDispatchAdmin(admin.ModelAdmin):
-    list_display = ('id', 'id_route', 'id_delivery', 'id_dispatched_by', 'id_client', 'dispatch_date', 'quantity')
-    list_filter = ('id', 'id_route', 'id_delivery', 'id_dispatched_by', 'id_client', 'dispatch_date', 'quantity')
-    search_fields = ('id', 'id_route', 'id_delivery', 'id_dispatched_by', 'id_client', 'dispatch_date', 'quantity')
-    ordering = ('id',)
+    list_display = ('id','id_route', 'id_dispatched_by', 'id_client', 'dispatch_date', 'quantity')
+    list_filter = ('id','id_route', 'id_dispatched_by', 'id_client', 'dispatch_date', 'quantity')
+    search_fields = ('id','id_route', 'id_dispatched_by', 'id_client', 'dispatch_date', 'quantity')
 
     filter_horizontal = ()
     list_filter = ()
     fieldsets = ()
+
+@admin.register(ProviderPayment)
+class ProviderPaymentAdmin(admin.ModelAdmin):
+    list_display = ('id', 'id_provider', 'payment_since', 'payment_until', 'payment_date', 'total_amount')
+    list_filter = ('id', 'id_provider', 'payment_since', 'payment_until', 'payment_date', 'total_amount')
+    search_fields = ('id', 'id_provider', 'payment_since', 'payment_until', 'payment_date', 'total_amount')
+    ordering = ('id',)
+    filter_horizontal = ()
+    list_filter = ()
+    fieldsets = ()
+
 

@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework_swagger.views import get_swagger_view
+
+# Swagger API documentation view for the API available at /api/docs only for authenticated users
+schema_view = get_swagger_view(title='Agrolactiva API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('product_control.urls', namespace='product_control')),
-    path(r'api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path(r'api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/docs/', schema_view)
 ]

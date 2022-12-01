@@ -5,6 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework import status, viewsets
+from rest_framework_swagger import renderers
 from datetime import datetime
 # Create your views here.
 
@@ -76,6 +77,22 @@ class ProviderProductControlViewSet(viewsets.ModelViewSet):
 
 @authentication_classes([SessionAuthentication, BasicAuthentication])
 @permission_classes([IsAuthenticated])
+class ProviderPaymentViewSet(viewsets.ModelViewSet):
+    '''
+    For the detail and get all show also the properties of the provider
+    '''
+    queryset = ProviderPayment.objects.all()
+    serializer_class = ProviderPaymentSerializer
+
+    # Show the @property of the provider
+    def retrieve(self, request, pk=None):
+        queryset = ProviderPayment.objects.all()
+        provider_payment = get_object_or_404(queryset, pk=pk)
+        serializer = ProviderPaymentSerializer(provider_payment)
+        return Response(serializer.data)
+
+@authentication_classes([SessionAuthentication, BasicAuthentication])
+@permission_classes([IsAuthenticated])
 class ProductDispatchViewSet(viewsets.ModelViewSet):
     queryset = ProductDispatch.objects.all()
     serializer_class = ProductDispatchSerializer
@@ -86,3 +103,22 @@ class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
+@permission_classes([IsAuthenticated])
+class ProviderPaymentViewSet(viewsets.ModelViewSet):
+    queryset = ProviderPayment.objects.all()
+    serializer_class = ProviderPaymentSerializer
+
+
+@authentication_classes([SessionAuthentication, BasicAuthentication])
+@permission_classes([IsAuthenticated])
+@api_view(['GET'])
+def calculate_loss(request):
+    '''
+    Calculate the loss by add all the deliverys and all de ProductDispatch between the dates
+    '''
+    pass
+
+
+
+    

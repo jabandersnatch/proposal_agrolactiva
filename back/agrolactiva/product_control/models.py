@@ -1,5 +1,6 @@
 from django.db import models
-
+from datetime import timedelta
+from django.utils import timezone
 # Create enumeration document type model
 class document_type(models.TextChoices):
     '''
@@ -84,17 +85,25 @@ class Location(models.Model):
 # Create route model
 class Route(models.Model):
     id = models.AutoField(primary_key=True)
-    n_providers = models.IntegerField()
-    avg_daily_product_income = models.IntegerField()
     locations = models.ManyToManyField(Location)
     route_type = models.CharField(
         max_length=20,
         choices=route_type.choices,
         default=route_type.MORNING_ROUTE,
     )
+    n_providers = models.IntegerField(default=0)
+
 
     def __str__(self):
-        return self.id
+        # Create a string with all the codes of the different Locations
+
+        location_codes = ''
+
+        for location in self.locations.all():
+            location_codes += location.code + ' - '
+
+
+        return f'{self.id} - {self.route_type} - {location_codes}'
 
     class Meta:
         verbose_name_plural = "Routes"
@@ -114,7 +123,6 @@ class Person(models.Model):
     )
     document_number = models.CharField(max_length=100)
     
-
     def __str__(self):
         return str(self.first_name) + ' ' + str(self.last_name)
         
@@ -149,7 +157,6 @@ class BillingInfo(models.Model):
     )
     account_number = models.CharField(max_length=100, blank=True, null=True)
     account_type = models.CharField(max_length=100, blank=True, null=True)
-    id_representative = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return f'{self.id_person}'
@@ -164,10 +171,10 @@ class Employee(models.Model):
     id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
     salary = models.IntegerField()
     start_date = models.DateField()
-    end_date = models.DateField()
+    end_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
-        return f'{self.id_person.name}'
+        return f'{self.id_person.first_name}'
         
     class Meta:
         verbose_name_plural = "Employees"
@@ -203,7 +210,7 @@ class Delivery(models.Model):
     quantity = models.IntegerField()
 
     def __str__(self):
-        return self.id
+        return f'{self.id} - {self.id_route} - {self.id_delivered_by} - {self.id_received_by} - {self.delivery_date} - {self.quantity}'
         
     class Meta:
         verbose_name_plural = "Deliveries"
@@ -238,7 +245,7 @@ class ProviderProductControl(models.Model):
         
     class Meta:
         verbose_name_plural = "Provider Product Control"
-        ordering = ['id_provider', 'id_delivery', 'quantity', 'id_provider_price', 'payment_amount']
+        ordering = ['id_provider', 'id_delivery', 'quantity', 'id_provider_price']
 
 # Create client
 
@@ -249,7 +256,7 @@ class Client(models.Model):
     register_date = models.DateField()
 
     def __str__(self):
-        return self.id_person
+        return self.id_person.first_name + ' ' + self.id_person.last_name
         
     class Meta:
         verbose_name_plural = "Clients"
@@ -262,18 +269,31 @@ class ProductDispatch(models.Model):
     id_delivery = models.ForeignKey(Delivery, on_delete=models.CASCADE)
     id_dispatched_by = models.ForeignKey(
             Employee, 
-            related_name='dispatched_by',
             on_delete=models.CASCADE)
     id_client = models.ForeignKey(
             Client, 
-            related_name='client',
             on_delete=models.CASCADE)
     dispatch_date = models.DateField()
     quantity = models.IntegerField()
 
     def __str__(self):
-        return f'{self.id_route} - {self.id_dispatched_by} - {self.id_client} - {self.dispatch_date} - {self.quantity}'
-        
+        return f'{self.id} - {self.id_route} - {self.id_delivery} - {self.id_dispatched_by} - {self.id_client} - {self.dispatch_date} - {self.quantity}'
     class Meta:
         verbose_name_plural = "Product Dispatch"
-        ordering = ['id_route', 'id_dispatched_by', 'id_client', 'dispatch_date', 'quantity']
+
+# Provider payment model
+class ProviderPayment(models.Model):
+    '''
+    The default payment since is 15 days before the current date
+    '''
+    id = models.AutoField(primary_key=True)
+    id_provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
+    payment_since = models.DateField(default=timezone.now() - timedelta(days=15))
+    payment_until = models.DateField(default=timezone.now)
+    payment_date = models.DateField(default=timezone.now)
+    total_amount = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.id} - {self.id_provider} - {self.payment_since} - {self.payment_until} - {self.payment_date} - {self.total_amount}'
+    class Meta:
+        verbose_name_plural = "Provider Payment"

@@ -1,0 +1,1866 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2022-11-30T14:39:50.359Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Guasca",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2022-11-30T14:42:18.252Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Gacheta",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2022-11-30T14:43:34.059Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "Junin",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2022-11-30T14:44:17.800Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "San Roque",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2022-11-30T14:44:48.014Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Páramo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2022-11-30T14:45:04.254Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Termales",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2022-11-30T14:48:54.806Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "1 - MORNING_ROUTE",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2022-11-30T14:57:01.276Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Beatriz De Pombo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2022-11-30T15:06:12.024Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "Beatriz De Pombo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2022-11-30T15:07:08.831Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Jackes Mossery",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2022-11-30T15:08:17.028Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "Martha Lucia Leon",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2022-11-30T15:08:49.797Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Fabio Castillo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2022-11-30T15:09:24.233Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "Lina María Ayala",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2022-11-30T15:10:24.217Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Lina María Ayala lina@mail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2022-11-30T15:10:50.213Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "Fabio Castillo fabiocast@mail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2022-11-30T15:11:15.609Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "Beatriz De Pombo beatrizpombo@mail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2022-11-30T15:12:59.798Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "Martha Lucia Leon marthalean@mail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2022-11-30T15:14:02.256Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "5",
+      "object_repr": "Jackes Mossery jackesmossery@mail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2022-11-30T15:30:50.648Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "Fabio Castillo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2022-11-30T15:31:48.460Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "Fabio Castillo",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2022-11-30T15:34:18.835Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "Lina María Ayala",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2022-11-30T15:34:46.425Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "3",
+      "object_repr": "Fabio Castillo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2022-11-30T15:35:16.743Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "4",
+      "object_repr": "Beatriz De Pombo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2022-11-30T15:36:38.802Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "5",
+      "object_repr": "Martha Lucia Leon",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2022-11-30T15:37:25.597Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "6",
+      "object_repr": "Jackes Mossery",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2022-11-30T15:47:45.719Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "2 - MORNING_ROUTE - sanroq ",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2022-11-30T15:49:04.326Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "Fabio Castillo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2022-11-30T15:53:26.024Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "3",
+      "object_repr": "Lina María Ayala",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2022-11-30T15:53:47.129Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "4",
+      "object_repr": "Jackes Mossery",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2022-11-30T15:54:37.795Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "5",
+      "object_repr": "Martha Lucia Leon",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2022-11-30T15:56:56.554Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "Juan Carlos Mendez",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2022-11-30T15:58:27.238Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "7",
+      "object_repr": "Alberto Ramos",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2022-11-30T15:59:37.045Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "8",
+      "object_repr": "Sergio Arboleda",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2022-11-30T16:01:26.642Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Juan Carlos",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2022-11-30T16:02:56.492Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Alberto",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2022-11-30T16:04:11.170Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "Sergio Arboleda",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2022-11-30T16:04:45.604Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "1 - 1 - MORNING_ROUTE - parm term  - Juan Carlos - Alberto - 2022-11-30 - 1500",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2022-11-30T16:05:06.877Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "2 - 2 - MORNING_ROUTE - sanroq  - Alberto - Alberto - 2022-11-30 - 700",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2022-11-30T16:05:26.522Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "3",
+      "object_repr": "3 - 1 - MORNING_ROUTE - parm term  - Juan Carlos - Juan Carlos - 2022-11-29 - 1900",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2022-11-30T16:05:55.253Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "4",
+      "object_repr": "4 - 2 - MORNING_ROUTE - sanroq  - Juan Carlos - Alberto - 2022-11-29 - 900",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2022-11-30T16:07:22.412Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "Beatriz De Pombo - 2200 - 2022-08-01 - 2022-11-30",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2022-11-30T16:07:26.547Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "1",
+      "object_repr": "Beatriz De Pombo - 2 - 2 - MORNING_ROUTE - sanroq  - Alberto - Alberto - 2022-11-30 - 700 - 700 - Beatriz De Pombo - 2200 - 2022-08-01 - 2022-11-30 - 1540000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2022-11-30T16:08:23.279Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "2",
+      "object_repr": "Lina María Ayala - 1 - 1 - MORNING_ROUTE - parm term  - Juan Carlos - Alberto - 2022-11-30 - 1500 - 500 - Beatriz De Pombo - 2200 - 2022-08-01 - 2022-11-30 - 1100000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2022-11-30T16:09:13.292Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "2",
+      "object_repr": "Lina María Ayala - 1999 - 2022-11-30 - 2022-12-31",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2022-11-30T16:09:14.903Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "3",
+      "object_repr": "Lina María Ayala - 1 - 1 - MORNING_ROUTE - parm term  - Juan Carlos - Alberto - 2022-11-30 - 1500 - 500 - Lina María Ayala - 1999 - 2022-11-30 - 2022-12-31 - 999500",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2022-11-30T16:09:29.902Z",
+      "user": 1,
+      "content_type": 17,
+      "object_id": "2",
+      "object_repr": "Lina María Ayala - 1 - 1 - MORNING_ROUTE - parm term  - Juan Carlos - Alberto - 2022-11-30 - 1500 - 500 - Lina María Ayala - 1999 - 2022-11-30 - 2022-12-31 - 999500",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Id provider price\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2022-11-30T16:11:10.424Z",
+      "user": 1,
+      "content_type": 19,
+      "object_id": "1",
+      "object_repr": "1 - 1 - MORNING_ROUTE - parm term  - 1 - 1 - MORNING_ROUTE - parm term  - Juan Carlos - Alberto - 2022-11-30 - 1500 - Juan Carlos - Sergio Arboleda - 2022-11-30 - 1500",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2022-11-30T16:12:18.783Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "1 - Lina María Ayala - Lina María Ayala - 2022-11-28 - 2022-12-03 - 2022-11-30 - 1999000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add municipality",
+      "content_type": 7,
+      "codename": "add_municipality"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change municipality",
+      "content_type": 7,
+      "codename": "change_municipality"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete municipality",
+      "content_type": 7,
+      "codename": "delete_municipality"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view municipality",
+      "content_type": 7,
+      "codename": "view_municipality"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add location",
+      "content_type": 8,
+      "codename": "add_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change location",
+      "content_type": 8,
+      "codename": "change_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete location",
+      "content_type": 8,
+      "codename": "delete_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view location",
+      "content_type": 8,
+      "codename": "view_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add route",
+      "content_type": 9,
+      "codename": "add_route"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change route",
+      "content_type": 9,
+      "codename": "change_route"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete route",
+      "content_type": 9,
+      "codename": "delete_route"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view route",
+      "content_type": 9,
+      "codename": "view_route"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add person",
+      "content_type": 10,
+      "codename": "add_person"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change person",
+      "content_type": 10,
+      "codename": "change_person"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete person",
+      "content_type": 10,
+      "codename": "delete_person"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view person",
+      "content_type": 10,
+      "codename": "view_person"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add contact info",
+      "content_type": 11,
+      "codename": "add_contactinfo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change contact info",
+      "content_type": 11,
+      "codename": "change_contactinfo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete contact info",
+      "content_type": 11,
+      "codename": "delete_contactinfo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view contact info",
+      "content_type": 11,
+      "codename": "view_contactinfo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add billing info",
+      "content_type": 12,
+      "codename": "add_billinginfo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change billing info",
+      "content_type": 12,
+      "codename": "change_billinginfo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete billing info",
+      "content_type": 12,
+      "codename": "delete_billinginfo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view billing info",
+      "content_type": 12,
+      "codename": "view_billinginfo"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add employee",
+      "content_type": 13,
+      "codename": "add_employee"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change employee",
+      "content_type": 13,
+      "codename": "change_employee"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete employee",
+      "content_type": 13,
+      "codename": "delete_employee"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view employee",
+      "content_type": 13,
+      "codename": "view_employee"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add provider",
+      "content_type": 14,
+      "codename": "add_provider"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change provider",
+      "content_type": 14,
+      "codename": "change_provider"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete provider",
+      "content_type": 14,
+      "codename": "delete_provider"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view provider",
+      "content_type": 14,
+      "codename": "view_provider"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add delivery",
+      "content_type": 15,
+      "codename": "add_delivery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change delivery",
+      "content_type": 15,
+      "codename": "change_delivery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete delivery",
+      "content_type": 15,
+      "codename": "delete_delivery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view delivery",
+      "content_type": 15,
+      "codename": "view_delivery"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add provider price",
+      "content_type": 16,
+      "codename": "add_providerprice"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change provider price",
+      "content_type": 16,
+      "codename": "change_providerprice"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete provider price",
+      "content_type": 16,
+      "codename": "delete_providerprice"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view provider price",
+      "content_type": 16,
+      "codename": "view_providerprice"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add provider product control",
+      "content_type": 17,
+      "codename": "add_providerproductcontrol"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change provider product control",
+      "content_type": 17,
+      "codename": "change_providerproductcontrol"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete provider product control",
+      "content_type": 17,
+      "codename": "delete_providerproductcontrol"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view provider product control",
+      "content_type": 17,
+      "codename": "view_providerproductcontrol"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add client",
+      "content_type": 18,
+      "codename": "add_client"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change client",
+      "content_type": 18,
+      "codename": "change_client"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete client",
+      "content_type": 18,
+      "codename": "delete_client"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view client",
+      "content_type": 18,
+      "codename": "view_client"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add product dispatch",
+      "content_type": 19,
+      "codename": "add_productdispatch"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change product dispatch",
+      "content_type": 19,
+      "codename": "change_productdispatch"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete product dispatch",
+      "content_type": 19,
+      "codename": "delete_productdispatch"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view product dispatch",
+      "content_type": 19,
+      "codename": "view_productdispatch"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add provider payment",
+      "content_type": 20,
+      "codename": "add_providerpayment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change provider payment",
+      "content_type": 20,
+      "codename": "change_providerpayment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete provider payment",
+      "content_type": 20,
+      "codename": "delete_providerpayment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view provider payment",
+      "content_type": 20,
+      "codename": "view_providerpayment"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$cdxc5XsbbYTVBjUCk1YVyK$S6IS+mVUkp7r1WlYJFPbbwjXwIxJkMlSStLwio/fJ7I=",
+      "last_login": "2022-11-30T14:32:32.030Z",
+      "is_superuser": true,
+      "username": "Dev",
+      "first_name": "",
+      "last_name": "",
+      "email": "ja.mendez@uniandes.edu.co",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-11-30T14:31:57.456Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "auth", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "product_control", "model": "municipality" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "product_control", "model": "location" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "product_control", "model": "route" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": { "app_label": "product_control", "model": "person" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "product_control", "model": "contactinfo" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "product_control", "model": "billinginfo" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": { "app_label": "product_control", "model": "employee" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": { "app_label": "product_control", "model": "provider" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": { "app_label": "product_control", "model": "delivery" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": { "app_label": "product_control", "model": "providerprice" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "product_control",
+      "model": "providerproductcontrol"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": { "app_label": "product_control", "model": "client" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": { "app_label": "product_control", "model": "productdispatch" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": { "app_label": "product_control", "model": "providerpayment" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "10x97hrfqerjxblfgpb8ey763r4hbagl",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hAGCIhL956BDMwgVQNJaVeNd9cmXej2v_f-JiKuS43r4DlOJC4CxOl3S5if3HZAD2z3LnNvyzwluSvyoEPeOvHrerh_BxVH_dZnndBzzso4IMxgkILxZDEo9ghYFNnAKnldrLNOKR_YMBXkYAA0iPcH-Vo4Gg:1p0O8W:GnEF9NIKDUuTT3Rm6xtQ1Drhtcm_xO8Biqmv8SkDAHI",
+      "expire_date": "2022-12-14T14:32:32.034Z"
+    }
+  },
+  {
+    "model": "product_control.municipality",
+    "pk": 1,
+    "fields": { "name": "Guasca", "code": "25322" }
+  },
+  {
+    "model": "product_control.municipality",
+    "pk": 2,
+    "fields": { "name": "Gacheta", "code": "25297" }
+  },
+  {
+    "model": "product_control.municipality",
+    "pk": 3,
+    "fields": { "name": "Junin", "code": "25372" }
+  },
+  {
+    "model": "product_control.location",
+    "pk": 1,
+    "fields": { "name": "San Roque", "code": "sanroq", "id_municipality": 1 }
+  },
+  {
+    "model": "product_control.location",
+    "pk": 2,
+    "fields": { "name": "Páramo", "code": "parm", "id_municipality": 2 }
+  },
+  {
+    "model": "product_control.location",
+    "pk": 3,
+    "fields": { "name": "Termales", "code": "term", "id_municipality": 3 }
+  },
+  {
+    "model": "product_control.route",
+    "pk": 1,
+    "fields": { "route_type": "MORNING_ROUTE", "locations": [2, 3] }
+  },
+  {
+    "model": "product_control.route",
+    "pk": 2,
+    "fields": { "route_type": "MORNING_ROUTE", "locations": [1] }
+  },
+  {
+    "model": "product_control.person",
+    "pk": 1,
+    "fields": {
+      "first_name": "Beatriz",
+      "last_name": "De Pombo",
+      "document_type": "CC",
+      "document_number": "35473256"
+    }
+  },
+  {
+    "model": "product_control.person",
+    "pk": 2,
+    "fields": {
+      "first_name": "Jackes",
+      "last_name": "Mossery",
+      "document_type": "CC",
+      "document_number": "35473256"
+    }
+  },
+  {
+    "model": "product_control.person",
+    "pk": 3,
+    "fields": {
+      "first_name": "Martha Lucia",
+      "last_name": "Leon",
+      "document_type": "CC",
+      "document_number": "4153213547"
+    }
+  },
+  {
+    "model": "product_control.person",
+    "pk": 4,
+    "fields": {
+      "first_name": "Fabio",
+      "last_name": "Castillo",
+      "document_type": "CC",
+      "document_number": "670284572"
+    }
+  },
+  {
+    "model": "product_control.person",
+    "pk": 5,
+    "fields": {
+      "first_name": "Lina María",
+      "last_name": "Ayala",
+      "document_type": "CC",
+      "document_number": "7412948"
+    }
+  },
+  {
+    "model": "product_control.person",
+    "pk": 6,
+    "fields": {
+      "first_name": "Juan Carlos",
+      "last_name": "Mendez",
+      "document_type": "CC",
+      "document_number": "80398536"
+    }
+  },
+  {
+    "model": "product_control.person",
+    "pk": 7,
+    "fields": {
+      "first_name": "Alberto",
+      "last_name": "Ramos",
+      "document_type": "CC",
+      "document_number": "1321354"
+    }
+  },
+  {
+    "model": "product_control.person",
+    "pk": 8,
+    "fields": {
+      "first_name": "Sergio",
+      "last_name": "Arboleda",
+      "document_type": "CC",
+      "document_number": "1324658"
+    }
+  },
+  {
+    "model": "product_control.contactinfo",
+    "pk": 1,
+    "fields": {
+      "id_person": 5,
+      "phone_number": "3504654652",
+      "email": "lina@mail.com"
+    }
+  },
+  {
+    "model": "product_control.contactinfo",
+    "pk": 2,
+    "fields": {
+      "id_person": 4,
+      "phone_number": "3409850293",
+      "email": "fabiocast@mail.com"
+    }
+  },
+  {
+    "model": "product_control.contactinfo",
+    "pk": 3,
+    "fields": {
+      "id_person": 1,
+      "phone_number": "3409850985",
+      "email": "beatrizpombo@mail.com"
+    }
+  },
+  {
+    "model": "product_control.contactinfo",
+    "pk": 4,
+    "fields": {
+      "id_person": 3,
+      "phone_number": "35034728",
+      "email": "marthalean@mail.com"
+    }
+  },
+  {
+    "model": "product_control.contactinfo",
+    "pk": 5,
+    "fields": {
+      "id_person": 2,
+      "phone_number": "34580982",
+      "email": "jackesmossery@mail.com"
+    }
+  },
+  {
+    "model": "product_control.billinginfo",
+    "pk": 2,
+    "fields": {
+      "id_person": 5,
+      "payment_type": "CASH",
+      "bank": "BANCOLOMBIA",
+      "account_number": "431360033644",
+      "account_type": "Ahorros"
+    }
+  },
+  {
+    "model": "product_control.billinginfo",
+    "pk": 3,
+    "fields": {
+      "id_person": 4,
+      "payment_type": "CASH",
+      "bank": "NO_APLICA",
+      "account_number": null,
+      "account_type": null
+    }
+  },
+  {
+    "model": "product_control.billinginfo",
+    "pk": 4,
+    "fields": {
+      "id_person": 1,
+      "payment_type": "CREDIT_CARD",
+      "bank": "BANCOLOMBIA",
+      "account_number": "4313600336447",
+      "account_type": "Ahorros"
+    }
+  },
+  {
+    "model": "product_control.billinginfo",
+    "pk": 5,
+    "fields": {
+      "id_person": 3,
+      "payment_type": "DEBIT_CARD",
+      "bank": "BANCO_DAVIVIENDA",
+      "account_number": "4313600336476",
+      "account_type": null
+    }
+  },
+  {
+    "model": "product_control.billinginfo",
+    "pk": 6,
+    "fields": {
+      "id_person": 2,
+      "payment_type": "CASH",
+      "bank": "BANCO_AGRARIO",
+      "account_number": "431360033665",
+      "account_type": "Ahorro a la mano"
+    }
+  },
+  {
+    "model": "product_control.employee",
+    "pk": 1,
+    "fields": {
+      "id_person": 6,
+      "salary": 5000000,
+      "start_date": "2022-06-16",
+      "end_date": null
+    }
+  },
+  {
+    "model": "product_control.employee",
+    "pk": 2,
+    "fields": {
+      "id_person": 7,
+      "salary": 1500000,
+      "start_date": "2021-09-15",
+      "end_date": null
+    }
+  },
+  {
+    "model": "product_control.provider",
+    "pk": 1,
+    "fields": { "id_person": 1, "id_route": 1, "register_date": "2022-11-30" }
+  },
+  {
+    "model": "product_control.provider",
+    "pk": 2,
+    "fields": { "id_person": 4, "id_route": 2, "register_date": "2022-11-30" }
+  },
+  {
+    "model": "product_control.provider",
+    "pk": 3,
+    "fields": { "id_person": 5, "id_route": 1, "register_date": "2022-11-30" }
+  },
+  {
+    "model": "product_control.provider",
+    "pk": 4,
+    "fields": { "id_person": 2, "id_route": 2, "register_date": "2022-11-30" }
+  },
+  {
+    "model": "product_control.provider",
+    "pk": 5,
+    "fields": { "id_person": 3, "id_route": 1, "register_date": "2022-11-30" }
+  },
+  {
+    "model": "product_control.delivery",
+    "pk": 1,
+    "fields": {
+      "id_route": 1,
+      "id_delivered_by": 1,
+      "id_received_by": 2,
+      "delivery_date": "2022-11-30",
+      "quantity": 1500
+    }
+  },
+  {
+    "model": "product_control.delivery",
+    "pk": 2,
+    "fields": {
+      "id_route": 2,
+      "id_delivered_by": 2,
+      "id_received_by": 2,
+      "delivery_date": "2022-11-30",
+      "quantity": 700
+    }
+  },
+  {
+    "model": "product_control.delivery",
+    "pk": 3,
+    "fields": {
+      "id_route": 1,
+      "id_delivered_by": 1,
+      "id_received_by": 1,
+      "delivery_date": "2022-11-29",
+      "quantity": 1900
+    }
+  },
+  {
+    "model": "product_control.delivery",
+    "pk": 4,
+    "fields": {
+      "id_route": 2,
+      "id_delivered_by": 1,
+      "id_received_by": 2,
+      "delivery_date": "2022-11-29",
+      "quantity": 900
+    }
+  },
+  {
+    "model": "product_control.providerprice",
+    "pk": 1,
+    "fields": {
+      "id_provider": 1,
+      "price": 2200,
+      "start_date": "2022-08-01",
+      "end_date": "2022-11-30"
+    }
+  },
+  {
+    "model": "product_control.providerprice",
+    "pk": 2,
+    "fields": {
+      "id_provider": 3,
+      "price": 1999,
+      "start_date": "2022-11-30",
+      "end_date": "2022-12-31"
+    }
+  },
+  {
+    "model": "product_control.providerproductcontrol",
+    "pk": 1,
+    "fields": {
+      "id_provider": 1,
+      "id_delivery": 2,
+      "quantity": 700,
+      "id_provider_price": 1
+    }
+  },
+  {
+    "model": "product_control.providerproductcontrol",
+    "pk": 2,
+    "fields": {
+      "id_provider": 3,
+      "id_delivery": 1,
+      "quantity": 500,
+      "id_provider_price": 2
+    }
+  },
+  {
+    "model": "product_control.providerproductcontrol",
+    "pk": 3,
+    "fields": {
+      "id_provider": 3,
+      "id_delivery": 1,
+      "quantity": 500,
+      "id_provider_price": 2
+    }
+  },
+  {
+    "model": "product_control.client",
+    "pk": 1,
+    "fields": {
+      "id_person": 8,
+      "organization": "ARBOLEDA",
+      "register_date": "2022-11-30"
+    }
+  },
+  {
+    "model": "product_control.productdispatch",
+    "pk": 1,
+    "fields": {
+      "id_route": 1,
+      "id_delivery": 1,
+      "id_dispatched_by": 1,
+      "id_client": 1,
+      "dispatch_date": "2022-11-30",
+      "quantity": 1500
+    }
+  },
+  {
+    "model": "product_control.providerpayment",
+    "pk": 1,
+    "fields": {
+      "id_provider": 3,
+      "id_billing_info": 2,
+      "payment_since": "2022-11-28",
+      "payment_until": "2022-12-03",
+      "payment_date": "2022-11-30"
+    }
+  }
+]
