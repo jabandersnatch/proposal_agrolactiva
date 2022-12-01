@@ -117,6 +117,7 @@ def calculate_loss(request):
     '''
     Calculate the loss by add all the deliverys and all de ProductDispatch between the dates
     '''
+    
     pass
 
 

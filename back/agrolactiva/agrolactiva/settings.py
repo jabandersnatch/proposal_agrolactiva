@@ -38,8 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+<<<<<<< HEAD
     'rest_framework_swagger',
     'product_control',
+=======
+    'product_control.apps.ProductControlConfig',
+    'rest_framework.authtoken',
+    'corsheaders'
+>>>>>>> 6fd183ba10f346634007041c83923e595b83a163
 ]
 
 MIDDLEWARE = [
@@ -194,3 +200,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication'
+    ]
+}
+
+LOGIN_REDIRECT_URL = '/api/'

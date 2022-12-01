@@ -1,5 +1,12 @@
 from .models import *
 from django.contrib import admin
+<<<<<<< HEAD
+=======
+from django.contrib.auth import get_user_model
+from rest_framework.authtoken.admin import TokenAdmin
+
+TokenAdmin.raw_id_fields = ['user']
+>>>>>>> 6fd183ba10f346634007041c83923e595b83a163
 
 @admin.register(Municipality)
 class MunicipalityAdmin(admin.ModelAdmin):
@@ -29,17 +36,6 @@ class RouteAdmin(admin.ModelAdmin):
     list_filter =   ('id', 'n_providers',  'route_type')
     search_fields = ('id', 'n_providers', 'route_type')
     ordering = ('id',)
-
-    filter_horizontal = ()
-    list_filter = ()
-    fieldsets = ()
-
-@admin.register(Person)
-class PersonAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'document_type', 'document_number')
-    list_filter = ('document_type',)
-    search_fields = ('first_name', 'last_name', 'document_type', 'document_number')
-    ordering = ('last_name', 'first_name')
 
     filter_horizontal = ()
     list_filter = ()
