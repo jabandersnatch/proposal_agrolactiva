@@ -283,12 +283,9 @@ class ProductDispatch(models.Model):
 
 # Provider payment model
 class ProviderPayment(models.Model):
-    '''
-    The default payment since is 15 days before the current date
-    '''
     id = models.AutoField(primary_key=True)
     id_provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
-    payment_since = models.DateField(default=timezone.now() - timedelta(days=15))
+    payment_since = models.DateField()
     payment_until = models.DateField(default=timezone.now)
     payment_date = models.DateField(default=timezone.now)
     total_amount = models.IntegerField()

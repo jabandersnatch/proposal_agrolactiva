@@ -15,15 +15,29 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework_swagger.views import get_swagger_view
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
 
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Agrolactiva API",
+        default_version='v1',
+        description="API for Agrolactiva",
+        terms_of_service="https://www.google.com/policies/terms/",
+        contact=openapi.Contact(email="andy.mendez.inc@gmail.com"),
+        license=openapi.License(name="MIT License"),
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
+)
 # Swagger API documentation view for the API available at /api/docs only for authenticated users
-schema_view = get_swagger_view(title='Agrolactiva API')
 
 urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('api/', include('product_control.urls', namespace='product_control')),
     path(r'api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api/docs/', schema_view)
+    path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
