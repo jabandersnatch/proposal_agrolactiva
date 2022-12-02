@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'agrolactiva.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'agrolactiva',
-        'USER': 'agrolactivausr',
-        'PASSWORD': 'agrolactivapass',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '123abc',
         'HOST': 'localhost',
         'PORT': '5432',
     }
