@@ -238,8 +238,7 @@ class ProviderProductControl(models.Model):
     id_delivery = models.ForeignKey(Delivery, on_delete=models.CASCADE)
     quantity = models.IntegerField()
     id_provider_price = models.ForeignKey(ProviderPrice, on_delete=models.CASCADE)
-    payment_amount = models.IntegerField()
-
+    payment_amount = models.IntegerField(null=True)
     def __str__(self):
         return f'{self.id_provider} - {self.id_delivery} - {self.quantity} - {self.id_provider_price} - {self.payment_amount}'
         
