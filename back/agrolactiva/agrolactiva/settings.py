@@ -114,8 +114,11 @@ AUTHENTICATION_BACKENDS = [
     
 # Config login url as api-auth/login
 
-LOGIN_URL = 'rest_framework:login'
-LOGOUT_URL = 'rest_framework:logout'
+LOGIN_URL = 'api-auth/login'
+
+# Config the logout url api-auth/logout
+
+LOGOUT = 'api-auth/logout'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

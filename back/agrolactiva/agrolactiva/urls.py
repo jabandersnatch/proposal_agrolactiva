@@ -37,7 +37,7 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('api/', include('product_control.urls', namespace='product_control')),
-    path(r'api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path(r'accounts/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
